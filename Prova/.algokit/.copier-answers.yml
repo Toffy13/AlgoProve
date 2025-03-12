@@ -1,0 +1,11 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 2.0.17
+_src_path: gh:algorandfoundation/algokit-fullstack-template
+author_email: 76650075+Toffy13@users.noreply.github.com
+author_name: Marco Francesco Toffaldano
+cloud_provider: vercel
+contract_name: hello_world
+deployment_language: python
+preset_name: production
+project_name: Prova
+

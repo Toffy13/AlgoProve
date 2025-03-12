@@ -1,0 +1,9 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 1.0.13
+_src_path: gh:algorandfoundation/algokit-react-frontend-template
+author_email: 76650075+Toffy13@users.noreply.github.com
+author_name: Marco Francesco Toffaldano
+cloud_provider: vercel
+preset_name: production
+project_name: Prova-frontend
+

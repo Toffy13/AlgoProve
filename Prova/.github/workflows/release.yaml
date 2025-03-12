@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
+      - '.vscode/**'
+      - '.idea/**'
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  Prova-contracts-validate:
+    name: Run Prova-contracts release
+    secrets: inherit
+    uses: ./.github/workflows/Prova-contracts-ci.yaml
+
+  Prova-contracts-release:
+    name: Run Prova-contracts release
+    secrets: inherit
+    uses: ./.github/workflows/Prova-contracts-cd.yaml
+    needs: Prova-contracts-validate
+
+  Prova-frontend-validate:
+    name: Run Prova-frontend release
+    secrets: inherit
+    uses: ./.github/workflows/Prova-frontend-ci.yaml
+
+  Prova-frontend-release:
+    name: Run Prova-frontend release
+    secrets: inherit
+    uses: ./.github/workflows/Prova-frontend-cd.yaml
+    needs: Prova-frontend-validate
